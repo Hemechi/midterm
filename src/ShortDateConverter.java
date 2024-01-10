@@ -10,7 +10,6 @@ public class ShortDateConverter {
         int month = 0;
         int day = 0;
 
-        // Extract year, month, and day from the short date
         int separatorIndex = shortDateStr.indexOf('-');
         if (separatorIndex != -1) {
             year = Integer.parseInt(shortDateStr.substring(0, separatorIndex));
@@ -21,7 +20,6 @@ public class ShortDateConverter {
             }
         }
 
-        // Convert month number to month name
         String monthName = "";
         switch (month) {
             case 1:
@@ -65,7 +63,6 @@ public class ShortDateConverter {
                 System.exit(0);
         }
 
-        // Display the full date representation
         String fullDate = monthName + " " + day + ", " + year;
         System.out.println("Full date representation: " + fullDate);
     }
